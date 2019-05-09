@@ -1,21 +1,25 @@
-<!-- <div class="left">
-	<app-saludo></app-saludo>
-	<app-saludo></app-saludo>
+<!--<div class="left">
+  <saludo></saludo>
+  <saludo></saludo>
+  <saludo></saludo>
 </div>
-
 <div class="right">
-	<app-saludo></app-saludo>
-	<app-saludo></app-saludo>
-</div> -->
-
+  <saludo></saludo>
+  <saludo></saludo>
+  <saludo></saludo>
+  <saludo></saludo>
+</div>-->
 <div>
-	<app-contador inicio="12"></app-contador>
+  <app-contador [start]="numeros[0]" end="2" (terminado)="handleTerminado($event)"></app-contador>
 </div>
+<app-contador [start]="numeros[1]"></app-contador>
+<app-contador [start]="numeros[2]" [end]="numeros[0]"></app-contador>
+<app-contador [start]="numeros[3]" end="5" (terminado)="handleTerminado($event)"></app-contador>
 
-<div>
-	<app-contador inicio="6"></app-contador>
-</div>
+<!--<app-calculadora></app-calculadora>-->
 
-<div>
-	<app-contador inicio="45"></app-contador>
-</div>
+<!--<app-formulario-simple></app-formulario-simple>-->
+
+<!--<app-formulario-registro></app-formulario-registro>-->
+
+<suma a="4" b="20" (total)="handleTotal($event)"></suma>

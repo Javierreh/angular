@@ -1,0 +1,9 @@
+<div class="container">
+	<h3 class="bg-dark text-white rounded pl-3 py-2 mb-0">Comanda</h3>
+	<ul *ngFor="let p of arrComanda" class="list-group">
+		<li class="list-group-item">{{ p.nombre }} - {{ p.precio }} €</li>
+	</ul>
+
+	<h3 class="bg-dark text-white rounded pl-3 py-2 mt-2 mb-0">Total</h3>
+	<p class="list-group-item text-center">{{ precioTotal() }} €</p>
+</div>

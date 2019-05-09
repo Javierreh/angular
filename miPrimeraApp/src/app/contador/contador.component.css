@@ -1,16 +1,13 @@
 div {
-	margin: 0 auto;
-	width: 150px;
-	font-size: 5em;
-	padding: 15px;
-	background-color: gold;
-	color: darkblue;
-	border: 3px solid darkblue;
-	text-align: center;
-	border-radius: 20px;
-	font-weight: bold
+    width: 150px;
+    height: 200px;
+    background-color: sandybrown;
+    color: white;
+    text-align: center;
+    font-size: 5em;
+    padding-top: 3px;
 }
 
 div p {
-	margin-bottom: 10px;
+    margin: 0;
 }

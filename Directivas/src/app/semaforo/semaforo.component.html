@@ -1,0 +1,7 @@
+<div class="semaforo" [ngClass]="{'color-rojo': (colorSemaforo == 'rojo'), 'color-ambar': (colorSemaforo == 'ambar'), 'color-verde': (colorSemaforo == 'verde')}" *ngIf="muestra"></div>
+
+<button (click)="handleClick('rojo')">ROJO</button>
+<button (click)="handleClick('ambar')">AMBAR</button>
+<button (click)="handleClick('verde')">VERDE</button>
+
+<button (click)="muestraOculta()">MOSTRAR / OCULTAR</button>

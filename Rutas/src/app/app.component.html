@@ -1,0 +1,14 @@
+<ul>
+  <li><a [routerLink]="['']" [routerLinkActive]="'activa'">Home</a></li>
+  <li><a [routerLink]="['hola']" [routerLinkActive]="'activa'">Saludo</a></li>
+  <li><a [routerLink]="['lista']" [routerLinkActive]="'activa'">Mostrar Lista</a></li>
+  <li><a [routerLink]="['producto', 354]" [routerLinkActive]="'activa'">Producto</a></li>
+  <li><a [routerLink]="['producto', 354, 'reviews']" [routerLinkActive]="'activa'">Reseñar Producto</a></li>
+</ul>
+<router-outlet></router-outlet>
+
+<button (click)="handleClick('')">HOME</button>
+<button (click)="handleClick('hola')">SALUDO</button>
+<button (click)="handleClick('lista')">MOSTRAR LISTA</button>
+
+<!-- /hola/que/tal ---- "['hola', 'que', 'tal']" -->

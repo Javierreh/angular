@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-contador',
@@ -7,38 +7,39 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContadorComponent implements OnInit {
 
-	// Interpolation = lo de poner propiedades entre {{}}
-	// property binding = [id]="blabla"
+  // Interpolation
+  cont: number
+  identificador: string
 
-	cont: number;
-	identificador: string;
-	
-	//input: propiedades de nuestra clase
-	@Input() inicio: string; //con el decorador @Input()
+  @Input("start") inicio: string
+  @Input("end") final: string
 
+  @Output() terminado = new EventEmitter()
 
-	constructor() { 
-		this.identificador = "cajita";
-	}
+  constructor() {
+    this.identificador = 'cajita'
+    this.final = '0'
+  }
 
-	ngOnInit() {
-		this.cont = parseInt(this.inicio);
-	}
+  ngOnInit() {
+    this.cont = parseInt(this.inicio)
+  }
 
-	handleClick($event) {
-		console.log($event.screenX);
-		console.log('Botón pulsado');
-		let interval = setInterval(() => {
-			this.cont--;
-			if (this.cont <= 0) {
-				clearInterval(interval);
-				this.identificador = "caja";
-			}
-		}, 1000);
-	}
+  handleClick($event) {
+    console.log($event.screenX)
+    console.log('Botón pulsado')
+    let interval = setInterval(() => {
+      this.cont--
+      if (this.cont == parseInt(this.final)) {
+        clearInterval(interval)
+        this.terminado.emit(this.final)
+        this.identificador = 'caja'
+      }
+    }, 1000)
+  }
 
-	resetCont() {
-		this.cont = parseInt(this.inicio);
-	}
+  resetCont() {
+    this.cont = 10
+  }
 
 }

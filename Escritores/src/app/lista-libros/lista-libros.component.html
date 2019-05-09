@@ -1,0 +1,9 @@
+<p>
+  {{ arrLibros | json }}
+</p>
+
+<div *ngFor="let libro of arrLibros" [routerLink]="['/libros', escritor.id]">
+	
+	libro.titulo
+
+</div>

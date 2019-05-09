@@ -1,0 +1,12 @@
+<div class="card mb-4" *ngFor="let t of tareas; let i = index">
+  <div class="card-header" [ngClass]="{'fondo-completa': t.completa, 'fondo-incompleta': !t.completa}">
+    Tarea {{ i+1 }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ t.titulo }}</h5>
+    <p class="card-text">{{ t.descripcion }}</p>
+    <p class="card-text">Categoría: {{ t.categoria }}</p>
+    <a href="#" class="btn btn-primary" *ngIf="!t.completa" (click)="marcarCompleta(t)">Completar</a>
+    <a href="#" class="btn btn-primary" *ngIf="t.completa" (click)="marcarCompleta(t)">Volver</a>
+  </div>
+</div>

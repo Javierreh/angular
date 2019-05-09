@@ -1,0 +1,12 @@
+.cabecera {
+	height: 150px;
+	background-color: lightslategray;
+	color: white;
+	padding: 20px;
+}
+
+h1 {
+	margin: 0 auto;
+	line-height: 6rem;
+	font-size: 60px;
+}

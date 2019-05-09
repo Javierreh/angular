@@ -1,0 +1,20 @@
+<div class="row mb-3">
+	<div class="col-3">
+		<img [src]="empleado.imagen" class="imagenEmpleado" alt="">
+	</div>
+
+	<div class="col-8">
+		<h3>{{ empleado.nombre}} {{ empleado.apellidos }}</h3>
+		<p>Departamento: {{ empleado.departamento }}</p>
+	</div>
+
+	<div class="col-1" [ngSwitch]="empleado.departamento">
+		<!-- Pongo en este caso desarrollo,ex,... entre comillas simple porq *ngSwitchCase está esperando codigo javascript valido -->
+		<i class="fas fa-file-code imagenDep" *ngSwitchCase="'desarrollo'"></i>
+		<i class="fab fa-sketch imagenDep" *ngSwitchCase="'ux'"></i>
+		<i class="fas fa-user-friends imagenDep" *ngSwitchCase="'rrhh'"></i>
+		<i class="fas fa-money-bill imagenDep" *ngSwitchCase="'contabilidad'"></i>
+	</div>
+</div>
+
+

@@ -1,0 +1,12 @@
+<div [ngSwitch]="color" [ngClass]="{ 'color-rojo': color == 'rojo', 'color-amarillo': color == 'amarillo', 'color-azul': color == 'azul' }">
+	
+	<div *ngSwitchCase="'rojo'">ROJO</div>
+	<div *ngSwitchCase="'amarillo'">AMARILLO</div>
+	<div *ngSwitchCase="'azul'">AZUL</div>
+	<div *ngSwitchDefault>NINGÚN COLOR</div>
+	
+</div>
+
+<button subrayado (click)="handleClick('rojo')">Cambio Rojo</button>
+<button (click)="handleClick('amarillo')">Cambio Amarillo</button>
+<button (click)="handleClick('azul')">Cambio Azul</button>

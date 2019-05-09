@@ -1,0 +1,17 @@
+<div class="wrapper">
+	<div class="form-group">
+		<label for="">NOMBRE</label>
+		<input type="text" class="form-control" [(ngModel)]="tareaTmp.titulo">
+	</div>
+
+	<div class="form-group">
+		<label for="">DESCRIPCIÓN</label>
+		<input type="text" class="form-control" [(ngModel)]="tareaTmp.descripcion">
+	</div>
+
+	<div class="form-group">
+		<label for="">CATEGORÍA</label>
+		<input type="text" class="form-control" [(ngModel)]="tareaTmp.categoria">
+	</div>
+	<button class="btn btn-primary btn-block" (click)="handleClick()">Enviar</button>
+</div>

@@ -1,0 +1,10 @@
+<cabecera></cabecera>
+<div class="row">
+	<div class="col-8">
+		<lista-productos (productoSent)="handleProductoSent($event)" titulo="Comida" [productos]="arrComida"></lista-productos>
+		<lista-productos (productoSent)="handleProductoSent($event)" titulo="Bebida" [productos]="arrBebida"></lista-productos>
+	</div>
+	
+	<comanda class="col-4" [arrComanda]="productosElegidos"></comanda>
+</div>
+

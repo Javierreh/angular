@@ -1,0 +1,32 @@
+<div>
+	
+	<div class="form-group">
+		<label for="">Nombre</label>
+		<input type="text" class="form-control" placeholder="Nombre del empleado" [(ngModel)]="empleadoTmp.nombre">
+	</div>
+
+	<div class="form-group">
+		<label for="">Apellidos</label>
+		<input type="text" class="form-control" placeholder="Apellidos del empleado" [(ngModel)]="empleadoTmp.apellidos">
+	</div>
+
+	<div class="form-group">
+		<label for="">Departamento</label>
+		<select class="form-control" [(ngModel)]="empleadoTmp.departamento">
+			<option value="desarrollo">Desarrollo</option>
+			<option value="ux">UX/IU</option>
+			<option value="rrhh">Recursos Humanos</option>
+			<option value="contabilidad">Contabilidad</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label for="">Imagen</label>
+		<input type="text" class="form-control" placeholder="Imagen del empleado" [(ngModel)]="empleadoTmp.imagen">
+	</div>
+
+	<input type="button" value="Enviar" class="btn btn-primary btn-block" (click)="submitForm()">
+
+</div>
+
+<!-- {{ empleadoTmp | json }} -->

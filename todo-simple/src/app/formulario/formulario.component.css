@@ -1,0 +1,16 @@
+.wrapper {
+	background-color: lightblue;
+	height: 400px;
+	width: 300px;
+	margin: 40px;
+	text-align: center;
+}
+
+input {
+	margin: 20px;
+}
+
+button {
+	display: block;
+	margin: 10px 120px;
+}
