@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EscritoresService } from './../escritores.service';
+import { Escritor } from '../models/escritor.model';
 
 @Component({
   selector: 'app-lista-escritores',
@@ -8,7 +9,7 @@ import { EscritoresService } from './../escritores.service';
 })
 export class ListaEscritoresComponent implements OnInit {
 
-	arrEscritores: any[];
+	arrEscritores: Escritor[];
 
 	constructor(private escritoresService: EscritoresService) { }
 

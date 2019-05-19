@@ -4,7 +4,7 @@ export class Libro {
 	titulo: string;
 	publicado: number;
 	imagen: string;
-	escritor: string;
+	escritor: number;
 
 	constructor(pId, pTitulo, pPublicado, pImagen, pEscritor) {
 		this.id = pId;

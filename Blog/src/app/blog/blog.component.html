@@ -1,0 +1,26 @@
+<select class="d-block mx-auto w-25 my-4" (change)="filtrarCat($event.target.value)">
+	<option value="todos">Todos las categorias</option>
+	<option value="playa">Playa</option>
+	<option value="montaña">Montaña</option>
+	<option value="ciudad">Ciudad</option>
+</select>
+
+<div class="w-50 m-auto">
+	<button [routerLink]="['/new']" class="d-block mx-auto w-25 my-4 btn btn-dark">Nuevo Post</button>
+</div>
+
+<div *ngFor="let post of posts" class="card mb-3 mx-auto w-75">
+  <div class="row no-gutters">
+    <div class="col-4">
+      <img [src]="post.imagen" class="card-img">
+    </div>
+    <div class="col-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.titulo }} <small class="text-muted">{{ post.autor }}</small></h5>
+        <p class="card-text">{{ post.texto }}</p>
+        <p class="card-text"><small class="text-muted">Posted: {{ post.fecha }}</small></p>
+        <p class="card-text"><small class="text-muted">Categoría: {{ post.categoria | uppercase }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

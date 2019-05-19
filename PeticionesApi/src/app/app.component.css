@@ -1,0 +1,15 @@
+.caja input {
+	width: 50px;
+	height: 50px;
+	font-size: 25px;
+	margin-bottom: -10px;
+}
+
+.cajas {
+	margin-top: 50px;
+}
+
+.caja {
+	display: inline-block;
+	text-align: center;
+}

@@ -14,14 +14,13 @@ export class ListaLibrosComponent implements OnInit {
 	arrLibros: Libro[];
 
 	constructor(private activatedRoute: ActivatedRoute, private escritoresService: EscritoresService) {
-		this.activatedRoute.params.subscribe(params => {
+		this.activatedRoute.parent.params.subscribe(params => {
 			this.escritorId = params.identificador;
 		});
 	}
 
 	ngOnInit() {
 		this.arrLibros = this.escritoresService.getLibrosbyIdAutor(this.escritorId);
-		console.log(this.arrLibros);
 	}
 
 }

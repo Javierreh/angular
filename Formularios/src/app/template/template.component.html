@@ -1,0 +1,10 @@
+<form novalidate #nuevaPersona="ngForm" (ngSubmit)="onSubmit(nuevaPersona.value)">
+
+	<input type="text" name="nombre" ngModel>
+	<input type="text" name="apellidos" ngModel>
+	<input type="text" name="direccion" ngModel>
+	<input type="text" name="edad" ngModel>
+
+	<input type="submit" value="Enviar">
+	
+</form>

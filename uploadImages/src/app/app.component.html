@@ -1,0 +1,34 @@
+<div class="wrapper">
+
+  <form novalidate [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="">Nombre</label>
+        <input class="form-control" type="text" formControlName="nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="">Apellidos</label>
+        <input class="form-control" type="text" formControlName="apellidos">
+    </div>
+
+    <div class="form-group">
+        <label for="">Edad</label>
+        <input class="form-control" min="0" max="120" type="number" formControlName="edad">
+    </div>
+
+    <div class="form-group">
+        <label for="">Imagen</label>
+        <input class="form-control" type="file" (change)="onChangeImage($event)">
+    </div>
+
+    <input type="submit" class="btn btn-block btn-primary" value="Enviar" [disabled]="!formulario.valid">
+  
+  </form>
+
+    {{ uploadPercent | async | number: '1.0-0' }}
+    
+    <img [src]="imageUrl" width="400" *ngIf="imageUrl">
+    <p *ngIf="!imageUrl">No existe la imagen</p>
+  
+</div>

@@ -1,0 +1,19 @@
+<div class="wrapper">
+		
+	<form novalidate class="mt-5" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+			
+		<div class="form-group">
+			<label for="">Usuario</label>
+			<input class="form-control" type="text" formControlName="username">
+		</div>
+
+		<div class="form-group">
+			<label for="">Password</label>
+			<input class="form-control" type="password" formControlName="password">
+		</div>
+
+		<input type="submit" class="btn btn-block btn-primary mb-5" value="Login" [disabled]="!formulario.valid">
+
+	</form>
+
+</div>
