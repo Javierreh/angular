@@ -1,0 +1,28 @@
+<div class="container text-center">
+	<button class="btn btn-primary my-3" [routerLink]="['/new']">Nuevo Alumno</button>
+</div>
+
+<div class="container">
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Nombre</th>
+	      <th scope="col">Apellidos</th>
+	      <th scope="col">Edad</th>
+	      <th scope="col">Email</th>
+	      <th scope="col">Matricula</th>
+	      <th scope="col">Acciones</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr *ngFor="let alumno of alumnos">
+	      <td>{{ alumno.nombre }}</td>
+	      <td>{{ alumno.apellidos }}</td>
+	      <td>{{ alumno.edad }}</td>
+	      <td>{{ alumno.email }}</td>
+	      <td>{{ alumno.matricula }}</td>
+	      <td><a href="" class="btn btn-danger">Eliminar</a></td>
+	    </tr>
+	   </tbody>
+	</table>
+</div>

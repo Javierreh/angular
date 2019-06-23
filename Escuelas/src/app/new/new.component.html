@@ -1,0 +1,51 @@
+<div class="container text-center">
+	<button class="btn btn-primary my-3" [routerLink]="['/main']">Volver a la lista</button>
+</div>
+
+<div class="container formulario">
+	<h2 class="mt-3">Nuevo Alumno</h2>		
+	<form novalidate class="mt-4" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+		
+		<div class="form-group">
+			<label for="">Nombre</label>
+			<input class="form-control" type="text" formControlName="nombre">
+		</div>
+
+		<div class="form-group">
+			<label for="">Apellidos</label>
+			<input class="form-control" type="text" formControlName="apellidos">
+		</div>
+
+		<div class="form-group">
+			<label for="">Email</label>
+			<input class="form-control" type="email" formControlName="email">
+		</div>
+
+		<div class="form-group">
+			<label for="">Edad</label>
+			<input class="form-control" type="number" formControlName="edad">
+		</div>
+
+		<div class="form-group">
+			<label for="">Matricula</label>
+			<input class="form-control" type="text" formControlName="matricula">
+		</div>
+
+		<div class="form-group">
+			<label for="">Nota Media</label>
+			<input class="form-control" type="number" formControlName="notamedia">
+		</div>
+
+		<div class="form-group">
+			<label for="">Sexo</label>
+			<select class="form-control" formControlName="sexo">
+				<option value="M">Masculino</option>
+				<option value="F">Femenino</option>
+			</select>
+		</div>
+
+		<input type="submit" class="btn btn-block btn-primary mb-5" value="Enviar" [disabled]="!formulario.valid">
+
+	</form>
+
+</div>
